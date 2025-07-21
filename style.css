@@ -1,0 +1,145 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #121212;
+  color: white;
+  background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+  background-size: cover;
+  transition: background-color 0.6s ease, color 0.6s ease;
+}
+
+header {
+  background-color: #1DB954;
+  padding: 20px;
+  text-align: center;
+  transition: background-color 0.6s;
+}
+
+header h1 {
+  margin: 0;
+  color: white;
+}
+
+nav {
+  margin-top: 10px;
+}
+
+nav a,
+#themeToggle {
+  margin: 0 10px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: color 0.3s, transform 0.3s;
+}
+
+#themeToggle:hover {
+  transform: scale(1.1) rotate(5deg);
+}
+
+main {
+  padding: 20px;
+}
+
+.hero {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  border-radius: 10px;
+  transition: background-color 0.6s ease;
+}
+
+button {
+  background-color: #1DB954;
+  border: none;
+  padding: 10px 15px;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #17a44d;
+}
+
+#quoteBox {
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+  font-style: italic;
+  margin-top: 15px;
+  min-height: 40px;
+}
+
+#quoteBox.show {
+  opacity: 1;
+}
+
+.artist-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.artist-card {
+  background-color: #282828;
+  padding: 15px;
+  text-align: center;
+  border-radius: 8px;
+  transition: transform 0.2s ease, background-color 0.6s;
+}
+
+.artist-card:hover {
+  transform: scale(1.05);
+}
+
+.artist-card a {
+  color: #1DB954;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  background-color: #1a1a1a;
+  color: #aaa;
+  font-size: 0.9em;
+  transition: background-color 0.6s ease;
+}
+
+
+body.light {
+  background-color: #f4f4f4;
+  color: #121212;
+  background-image: none;
+}
+
+body.light header {
+  background-color: #1DB954;
+  color: white;
+}
+
+body.light .hero,
+body.light .artist-card {
+  background-color: #eaeaea;
+  color: #121212;
+}
+
+body.light footer {
+  background-color: #ccc;
+  color: #333;
+}
+
+body.light #themeToggle {
+  color:
