@@ -23,12 +23,12 @@ function showQuote() {
   }, 100);
 }
 
-// Theme toggle logic
+
 const toggleBtn = document.getElementById("themeToggle");
 const body = document.body;
 let theme = localStorage.getItem("theme");
 
-// Load saved theme
+
 if (theme === "light") {
   body.classList.add("light");
   toggleBtn.innerText = "🌞 Theme";
@@ -40,7 +40,7 @@ toggleBtn.addEventListener("click", () => {
   toggleBtn.innerText = isLight ? "🌞 Theme" : "🌙 Theme";
   localStorage.setItem("theme", isLight ? "light" : "dark");
 
-  // Button animation
+
   toggleBtn.style.transform = "rotate(360deg)";
   setTimeout(() => {
     toggleBtn.style.transform = "none";
