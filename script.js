@@ -1,48 +1,66 @@
+function getRandomQuote() {
 
-function showQuote() {
-  const quotes = [
-    "🎶 Music is the shorthand of emotion. — Leo Tolstoy",
-    "🎧 One good thing about music, when it hits you, you feel no pain. — Bob Marley",
-    "🎼 Without music, life would be a mistake. — Friedrich Nietzsche",
-    "🎵 Music expresses that which cannot be said and on which it is impossible to be silent. — Victor Hugo",
-    "🎹 Music can change the world. — Beethoven",
-    "🎷 Where words fail, music speaks. — Hans Christian Andersen",
-    "🪩 Life is one grand, sweet song, so start the music. — Ronald Reagan",
-    "🎤 Music brings people together. — Ed Sheeran",
-    "📻 Spotify makes the day better. — Every student ever 😄"
+  const musicQuotes = [
+    "Music is the shorthand of emotion. - Leo Tolstoy", 
+    "One good thing about music, when it hits you, you feel no pain. - Bob Marley",
+    "Without music, life would be a mistake. - Friedrich Nietzsche",
+    "Music expresses that which cannot be said and on which it is impossible to be silent. - Victor Hugo",
+    "Music can change the world. - Beethoven",
+    "Where words fail, music speaks. - Hans Christian Andersen",
+    "Life is one grand, sweet song, so start the music. - Ronald Reagan",
+    "Music brings people together. - Ed Sheeran",
+    "Spotify with math is fun i repeat i aint a nerd. - Every student ever lowk only me?!"
   ];
 
-  const quoteBox = document.getElementById("quoteBox");
-  const randomIndex = Math.floor(Math.random() * quotes.length);
-  const quote = quotes[randomIndex];
+  let quoteElement = document.getElementById("quoteBox");
 
-  quoteBox.classList.remove("show");
-  setTimeout(() => {
-    quoteBox.innerText = quote;
-    quoteBox.classList.add("show");
+  let randomNumber = Math.floor(Math.random() * musicQuotes.length);
+
+  quoteElement.classList.remove("show");
+
+  setTimeout(function () {
+
+    quoteElement.innerText = musicQuotes[randomNumber];
+
+    quoteElement.classList.add("show");
+
   }, 100);
+
 }
 
 
-const toggleBtn = document.getElementById("themeToggle");
-const body = document.body;
-let theme = localStorage.getItem("theme");
+const button = document.getElementById("themeToggle");
+const page = document.body;
+
+let currentTheme = localStorage.getItem("theme");
 
 
-if (theme === "light") {
-  body.classList.add("light");
-  toggleBtn.innerText = "🌞 Theme";
+if(currentTheme == "light")
+{
+  page.classList.add("light");
+  button.innerText = "Light Theme";
 }
 
-toggleBtn.addEventListener("click", () => {
-  body.classList.toggle("light");
-  const isLight = body.classList.contains("light");
-  toggleBtn.innerText = isLight ? "🌞 Theme" : "🌙 Theme";
-  localStorage.setItem("theme", isLight ? "light" : "dark");
 
+button.addEventListener("click", function() {
 
-  toggleBtn.style.transform = "rotate(360deg)";
-  setTimeout(() => {
-    toggleBtn.style.transform = "none";
+  page.classList.toggle("light");
+
+  let lightMode = page.classList.contains("light");
+
+  if(lightMode){
+    button.innerText = "Light Theme";
+  }
+  else{
+    button.innerText = "Dark Theme";
+  }
+
+  localStorage.setItem("theme", lightMode ? "light" : "dark");
+
+  button.style.transform = "rotate(360deg)";
+
+  setTimeout(function() {
+    button.style.transform = "";
   }, 500);
+
 });
