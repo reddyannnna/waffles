@@ -1,6 +1,6 @@
-function getRandomLecture() {
+function getRandom() {
 
-  const musicLecture = [
+  const  = [
     "Music is the shorthand of emotion. - Leo Tolstoy", 
     "One good thing about music, when it hits you, you feel no pain. - Bob Marley",
     "Without music, life would be a mistake. - Friedrich Nietzsche",
