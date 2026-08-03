@@ -1,7 +1,7 @@
-function getRandomquoteBox {
+function showQuote() {
 
-  constquoteBox  = [
-    "Music is the shorthand of emotion. - Leo Tolstoy", 
+  const musicQuotes = [
+    "Music is the shorthand of emotion. - Leo Tolstoy",
     "One good thing about music, when it hits you, you feel no pain. - Bob Marley",
     "Without music, life would be a mistake. - Friedrich Nietzsche",
     "Music expresses that which cannot be said and on which it is impossible to be silent. - Victor Hugo",
@@ -9,57 +9,50 @@ function getRandomquoteBox {
     "Where words fail, music speaks. - Hans Christian Andersen",
     "Life is one grand, sweet song, so start the music. - Ronald Reagan",
     "Music brings people together. - Ed Sheeran",
-    "Spotify with math is fun i repeat i aint a nerd. - Every student ever lowk only me?!"
+    "Spotify with math is fun. I repeat, I ain't a nerd. - Every student ever"
   ];
 
-  let quoteElement = document.getElementById("quoteBox");
+  const quoteElement = document.getElementById("quoteBox");
 
-  let randomNumber = Math.floor(Math.random() * musicQuotes.length);
+  const randomNumber = Math.floor(Math.random() * musicQuotes.length);
 
   quoteElement.classList.remove("show");
 
-  setTimeout(function () {
-
+  setTimeout(() => {
     quoteElement.innerText = musicQuotes[randomNumber];
-
     quoteElement.classList.add("show");
-
   }, 100);
-
 }
-
 
 const button = document.getElementById("themeToggle");
 const page = document.body;
 
 let currentTheme = localStorage.getItem("theme");
 
-
-if(currentTheme == "light")
-{
+if (currentTheme === "light") {
   page.classList.add("light");
-  button.innerText = "Light Theme";
+  button.innerText = " Light Theme";
+} else {
+  button.innerText = " Dark Theme";
 }
 
-
-button.addEventListener("click", function() {
+button.addEventListener("click", () => {
 
   page.classList.toggle("light");
 
-  let lightMode = page.classList.contains("light");
+  const lightMode = page.classList.contains("light");
 
-  if(lightMode){
-    button.innerText = "Light Theme";
-  }
-  else{
-    button.innerText = "Dark Theme";
+  if (lightMode) {
+    button.innerText = " Light Theme";
+  } else {
+    button.innerText = " Dark Theme";
   }
 
   localStorage.setItem("theme", lightMode ? "light" : "dark");
 
   button.style.transform = "rotate(360deg)";
 
-  setTimeout(function() {
+  setTimeout(() => {
     button.style.transform = "";
   }, 500);
 
