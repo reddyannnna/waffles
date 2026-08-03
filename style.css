@@ -1,31 +1,31 @@
-body{
+body {
   margin: 0;
   font-family: "Segoe UI", sans-serif;
   background-color: #121212;
   color: white;
-  background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+  background-image: url("https://www.transparenttextures.com/patterns/stardust.png");
   background-size: cover;
-  transition: 0.6s;
+  transition: background-color 0.6s ease, color 0.6s ease;
 }
 
-header{
+header {
   background: #1DB954;
   padding: 20px;
   text-align: center;
   transition: 0.6s;
 }
 
-header h1{
-  margin:0;
-  color:white;
+header h1 {
+  margin: 0;
+  color: white;
 }
 
-nav{
+nav {
   margin-top: 10px;
 }
 
 nav a,
-#themeToggle{
+#themeToggle {
   margin: 0 10px;
   color: white;
   text-decoration: none;
@@ -34,110 +34,129 @@ nav a,
   border: none;
   background: none;
   cursor: pointer;
-  transition: 0.3s;
+  transition: transform 0.5s ease, color 0.3s ease;
 }
 
-#themeToggle:hover{
+nav a:hover,
+#themeToggle:hover {
+  opacity: 0.8;
+}
+
+#themeToggle:hover {
   transform: scale(1.1) rotate(5deg);
 }
 
-main{
-  padding:20px;
+main {
+  padding: 20px;
 }
 
-.hero{
-  background: rgba(0,0,0,0.3);
-  padding: 20px;
-  border-radius: 10px;
+.hero {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 25px;
+  border-radius: 12px;
+  max-width: 700px;
+  margin: auto;
   transition: 0.6s;
 }
 
-button{
+.hero h2 {
+  margin-top: 0;
+}
+
+button {
   background: #1DB954;
-  border:none;
-  padding:10px 15px;
-  color:white;
-  border-radius:5px;
-  cursor:pointer;
-  margin-top:10px;
-  font-size:1rem;
+  border: none;
+  padding: 10px 15px;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-size: 1rem;
+  transition: 0.3s;
 }
 
-button:hover{
-  background-color:#17a44d;
+button:hover {
+  background-color: #17a44d;
 }
 
-#quoteBox{
-  opacity:0;
-  transition: opacity .8s ease-in-out;
+#quoteBox {
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
   font-style: italic;
-  margin-top:15px;
-  min-height:40px;
+  margin-top: 15px;
+  min-height: 40px;
+  line-height: 1.5;
 }
 
-#quoteBox.show{
+#quoteBox.show {
   opacity: 1;
 }
 
-.artist-grid{
-  display:grid;
-  grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
-  gap:15px;
-  margin-top:20px;
+.artist-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
 }
 
-.artist-card{
-  background-color:#282828;
-  padding:15px;
-  text-align:center;
-  border-radius:8px;
-  transition: .2s ease;
+.artist-card {
+  background-color: #282828;
+  padding: 15px;
+  text-align: center;
+  border-radius: 8px;
+  transition: 0.2s ease;
 }
 
-.artist-card:hover{
-  transform:scale(1.05);
+.artist-card:hover {
+  transform: scale(1.05);
 }
 
-.artist-card a{
-  color:#1DB954;
-  text-decoration:none;
-  font-weight:bold;
+.artist-card a {
+  color: #1DB954;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-ul{
-  padding-left:20px;
+ul {
+  padding-left: 20px;
 }
 
-footer{
-  text-align:center;
-  padding:15px;
-  background:#1a1a1a;
-  color:#aaa;
-  font-size:.9em;
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #1a1a1a;
+  color: #aaa;
+  font-size: 0.9em;
+  margin-top: 30px;
 }
 
-body.light{
-  background-color:#f4f4f4;
-  color:#121212;
-  background-image:none;
+/* Light Theme */
+
+body.light {
+  background-color: #f4f4f4;
+  color: #121212;
+  background-image: none;
 }
 
-body.light header{
-  background:#1DB954;
-  color:white;
+body.light header {
+  background: #1DB954;
+}
+
+body.light nav a {
+  color: #121212;
 }
 
 body.light .hero,
-body.light .artist-card{
-  background:#eaeaea;
-  color:#121212;
+body.light .artist-card {
+  background: #eaeaea;
+  color: #121212;
 }
 
-body.light footer{
-  background:#ccc;
-  color:#333;
+body.light footer {
+  background: #cccccc;
+  color: #333333;
 }
 
-body.light #themeToggle{
-  color:#121212;
+body.light #themeToggle {
+  color: #121212;
 }
