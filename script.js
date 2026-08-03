@@ -1,15 +1,15 @@
 function showQuote() {
 
   const musicQuotes = [
-    "Music is the shorthand of emotion. - Leo Tolstoy",
-    "One good thing about music, when it hits you, you feel no pain. - Bob Marley",
-    "Without music, life would be a mistake. - Friedrich Nietzsche",
-    "Music expresses that which cannot be said and on which it is impossible to be silent. - Victor Hugo",
-    "Music can change the world. - Beethoven",
-    "Where words fail, music speaks. - Hans Christian Andersen",
-    "Life is one grand, sweet song, so start the music. - Ronald Reagan",
-    "Music brings people together. - Ed Sheeran",
-    "Spotify with math is fun. I repeat, I ain't a nerd. - Every student ever"
+    "Music is the shorthand of emotion - Leo Tolstoy",
+    "One good thing about music when it hits you you feel no pain - Bob Marley",
+    "Without music life would be a mistake - Friedrich Nietzsche",
+    "Music expresses that which cannot be said and on which it is impossible to be silent - Victor Hugo",
+    "Music can change the world - Beethoven",
+    "Where words fail, music speaks - Hans Christian Andersen",
+    "Life is one grand, sweet song, so start the music - Ronald Reagan",
+    "Music brings people together - Ed Sheeran",
+    "Spotify with math is lowk fun I repeat- I aint a nerd - every student ever"
   ];
 
   const quoteElement = document.getElementById("quoteBox");
